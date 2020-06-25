@@ -18,3 +18,12 @@ redis-cli -c -p 7000
 npm start
 
 localhost:8080/
+
+// 1
+two tabs
+
+node index.js 8080
+localhost:8080/
+
+node index.js 8081
+localhost:8081/

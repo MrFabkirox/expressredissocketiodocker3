@@ -7,7 +7,9 @@ var app = express();
 
 // connect to redis
 var redisClient = redis.createClient(config.redis_port, config.redis_host);
-redisClient.set('REDIS_KEY', '0');
+
+// 1 localhost:8080
+// redisClient.set('REDIS_KEY', '0');
 
 app.get('/', (req, res) => {
   redisClient.incr('REDIS_KEY', (err, reply) => {
@@ -18,6 +20,9 @@ app.get('/', (req, res) => {
   })
 })
 
-var server = app.listen(8080, function() {
-  console.log('Express at [%o]', server.address());
-});
+// 1
+// var server = app.listen(8080, function() {
+//   console.log('Express at [%o]', server.address());
+// });
+
+app.listen(process.argv[2]);

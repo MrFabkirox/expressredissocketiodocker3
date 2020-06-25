@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  redis:
+    image: redis:alpine
+    ports:
+      # The HTTP port
+      - "6379:6379"
+    volumes:
+      - /home/fab/shared:/home/ubuntu/shared

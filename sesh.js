@@ -1,4 +1,4 @@
-// placeholer for all different codes
+// sesh
 
 const express = require('express'),
   session = require('express-session'),
